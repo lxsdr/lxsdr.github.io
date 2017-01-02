@@ -1,152 +1,86 @@
-<html>
-<head>
-  <title>the portfolio of Alex Seder</title>
-  <meta name="description" content="The online portfolio of graphic designer Alex Seder.">
-  <meta name="keywords" content="portfolio, design, graphic design, Alex Seder">
- 
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat" rel="stylesheet">
-  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script type="text/JavaScript" src="js/jquery.scroll_to.js"></script>
-  <script type="text/JavaScript" src="js/jquery.snapscroll.js"></script>
-  <script type="text/JavaScript">
-	  $(function() {
-  $(".content").snapscroll();
-});
-  </script>
-  
-<style type="text/css">
-  body {
-	  margin:0;padding:0;
-	  background-color: #fff;
-	  color:#111;
-	  font-family:'Bungee', Helvetica, Arial, sans-serif;
-	  letter-spacing: -1;
-  }
-  
-  .content {
-	  height:100%;
-  }
-  
-  h1 {
-	  font-size:1.25vw;
-	  font-weight:normal;
-  }
-  
-   .slide1 {
-	  background-image:url(img/face.jpg);
-	  background-color:#eee;
-	  background-position: center center;
-	  background-size:cover;
-	  height:100%;
-  }
-  
-  .slide1-content {
-	  vertical-align: middle;
-	  color:#f6f611;
-	  font-size:10vw;
-	  position: absolute;
-	  margin:6% 0 0 6%;
-  }
-   
-   .slide {
-	  background-color:#fff;
-	  height:100%;
-	  width:100%;
-	  margin:0 auto;
-  }
-   
-   .slide-content {
-	  margin:0 auto;
-	  width:100%;
-	  text-align: center;
-  }
-  
-   .slide-content img {
-	   max-height:80vh;
-	   margin:5%;
-   }
- 
+<!DOCTYPE html "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta charset=utf-8 />
+	<title>the media collection of Alex Seder</title>
+	<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1" />
+	<link rel="icon" type="image/x-icon" href="">
 
-</style>
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" media="all and (max-device-width: 480px)" href="assets/css/iphone.css">
+	<link rel="stylesheet" media="all and (-webkit-min-device-pixel-ratio: 2)" href="assets/css/iphone-retina.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
-
+	<script src="/assets/js/jquery.1.4.4.min.js"></script>
+	<script src=“/assets/js/utils.js"></script>
+	<script src="/assets/js/plex.js"></script>
+	<script>
+	jQuery(document).ready(function($){
+		PLEX.run();
+	});
+	</script>
 </head>
+
 <body>
+<div id="container">
+
+	<a href="#sidebar" id="toggle_sidebar">toggle sidebar</a>
+
+	<div id="sidebar">
+		
+
+		<div class="sidebar-section">
+			<h2>Library</h2>
+			<ul class="sections-list" id="plex_section_list"><li>Loading...</li></ul>
+		</div><!-- end .sidebar-section -->
+
+		<div class="sidebar-section">
+			<h2>Sort</h2>
+			<ul class="generic-list" id="plex_sort_list">
+				<li class="current" data-sort="title"><em>asc</em>By title</li>
+				<li data-sort="rating">By rating</li>
+				<li data-sort="release">By release date</li>
+				<li data-sort="addedAt">By recently added</li>
+			</ul>
+		</div><!-- end .sidebar-section -->
 	
-	<div class="content">
 		
-		<div class="slide1">
-			<div class="slide1-content">
-			the online portfolio of Alex Seder
+
+		<div class="sidebar-section" id="plex_genre_list_section">
+			<h2>Genres</h2>
+			<ul class="generic-list" id="plex_genre_list"></ul>
+		</div><!-- end .sidebar-section -->
+
+		<div class="sidebar-section" id="plex_director_list_section">
+			<h2>Directors</h2>
+			<ul class="generic-list" id="plex_director_list"></ul>
+		</div><!-- end .sidebar-section -->
+
+	</div><!-- end #sidebar -->
+
+	<div id="main">
+
+		<div id="section-header">
+			<div>
+				<input type="text" />
+				<h2>Loading</h2>
+				<p>Please wait while this section loads...</p>
 			</div>
+		</div><!-- end .section-header -->
+
+		<div id="item-list-status">
+			<p>Loading library data...</p>
 		</div>
-		
-		<div class="slide" style="background-color:#8e3152;">
-			<div class="slide-content">
-				<img src="img/dvcrt-text2_3600.jpg">
-			</div>
+
+		<div id="item-list">
+			<ul></ul>
 		</div>
-		
-		<div class="slide" style="background-color:#fff;">
-			<div class="slide-content">
-				<img src="img/fon-rectangle-logo_800.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#d59059;">
-			<div class="slide-content">
-				<img src="http://66.media.tumblr.com/981f06585f4f778225e0a00b35673e6d/tumblr_nvxd8skoLz1qz9a43o1_1280.png">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#fff;">
-			<div class="slide-content">
-				<img src="http://67.media.tumblr.com/8a54218e0b0ae1521590adb4ae3375f1/tumblr_nhkjynktIi1qz9a43o1_1280.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#DD4446;">
-			<div class="slide-content">
-				<img src="http://67.media.tumblr.com/11b985c421b6fc6590d9911cf2d75289/tumblr_no9avzLLYV1qz9a43o1_1280.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#e7e7e7;">
-			<div class="slide-content">
-				<img src="http://67.media.tumblr.com/2b5a38650fdd381f07511c44f1c57c91/tumblr_nkk84evlNY1qz9a43o1_1280.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#e8d51f;">
-			<div class="slide-content">
-				<img src="http://67.media.tumblr.com/eb0ab9feea71608f9c8bef29d0413105/tumblr_mjz8f4jbfX1qz9a43o1_1280.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#062496;">
-			<div class="slide-content">
-				<img src="img/630-lesser-sq_logo-1000-1000v2_o.jpg">
-			</div>
-		</div>
-		
-		<div class="slide">
-			<div class="slide-content" style="padding-top:5%;">
-				<img src="img/alpha8-wordmark_o.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#1c1c1c;">
-			<div class="slide-content">
-				<img src="img/dalinian-puzzles_o.jpg">
-			</div>
-		</div>
-		
-		<div class="slide" style="background-color:#e2dbd4;">
-			<div class="slide-content">
-				<img src="img/wam_o.jpg">
-			</div>
-		</div>
-	</div>
+
+	</div><!-- end #main -->
+
+
+</div><!-- end #container -->
+
 
 </body>
 </html>
